@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LoginFragment">
+
+    <TextView
+        android:id="@+id/txtlogin"
+        android:text="Sign In"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:padding="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtlogin"
+        android:padding="10dp"
+        app:boxBackgroundColor="@color/white"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ednameLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    sadasda-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edname"
+        android:padding="10dp"
+        app:boxBackgroundColor="@color/white"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/adminEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edEmail"
+        android:padding="10dp"
+        app:boxBackgroundColor="@color/white"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:endIconMode="password_toggle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/adminPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/Checkboxlogin"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:text="Remember Me"
+        android:layout_below="@id/edPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/Register"
+        android:text="Forged Password"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/edPassword"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Register"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/Blue"
+        android:text="Login"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_or"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Or"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnlogin"/>
+
+    <View
+        android:layout_width="155dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/btnlogin"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="19dp"
+        android:background="@color/abuabu"
+        android:layout_toStartOf="@+id/tv_or" />
+
+    <View
+        android:layout_width="155dp"
+        android:layout_height="3dp"
+        android:layout_below="@id/btnlogin"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="28dp"
+        android:layout_toEndOf="@+id/tv_or"
+        android:background="@color/abuabu" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_google"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Sign in with google"
+        android:textAllCaps="false"
+        app:icon="@drawable/google_icon"
+        app:iconTintMode="multiply"
+        app:iconSize="24dp"
+        android:textColor="@color/black"
+        app:iconTint="@color/white"
+        app:iconGravity="textStart"
+        app:iconPadding="24dp"
+        android:layout_below="@id/tv_or"
+        app:cornerRadius="10dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"/>
+
+    <TextView
+        android:text="Don't have an account ?"
+        android:layout_below="@+id/btn_google"
+        android:paddingStart="50dp"
+        android:paddingTop="6dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/textSignIn"
+        android:text="Sign In"
+        android:layout_below="@+id/btn_google"
+        android:paddingTop="6dp"
+        android:textStyle="bold"
+        android:textColor="@color/Blue"
+        android:layout_alignParentRight="true"
+        android:paddingEnd="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/Blue"
+    tools:context=".HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_Welcome"
+            android:text="Welcome! "
+            android:layout_marginTop="25dp"
+            android:textSize="25dp"
+            android:layout_toRightOf="@id/accout"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/txt_user"
+            android:text="Sigit"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/txt_Welcome"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/txt_infomasi"
+            android:layout_below="@+id/txt_Welcome"
+            android:textColor="@color/white"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:text="Ajukan Keluhan Anda Terkait Fasillitas Publik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/notifikasi"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/baseline_circle_notifications_24"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:layout_toLeftOf="@+id/accout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        <ImageView
+            android:id="@+id/accout"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/baseline_account_circle_24" />
+
+        <!--    Card Profile Desa-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_ProfileDesa"
+            android:layout_margin="15dp"
+            android:layout_below="@+id/txt_infomasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_margin="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/img_ProfileDesa"
+                    android:src="@drawable/monumen_nasional"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+                <TextView
+                    android:id="@+id/txt_profiledesa"
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/img_ProfileDesa"
+                    android:layout_margin="10dp"
+                    android:text="Desa Pondok Ranji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_below="@id/txt_profiledesa"
+                    android:layout_toRightOf="@+id/img_ProfileDesa"
+                    android:textColor="@color/black"
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kota Tangerang Selatan" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txt_menu"
+            android:text="Menu"
+            android:layout_below="@+id/card_ProfileDesa"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!--    Pengaduan Masyarakat-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crd_pengaduanMasyarak"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/txt_menu"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_place"
+                    android:layout_width="208dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/googlenews"
+                    app:shapeAppearanceOverlay="@style/Circular2" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/name_pengaduanMasyarakat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/crd_pengaduanMasyarak"
+            android:layout_marginStart="25dp"
+            android:layout_marginRight="20dp"
+            android:text="Pengaduan \n Masyarakat"
+            android:textColor="@color/white" />
+
+
+
+<!--        Iuran Bulanan -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crd_IuranBulanan"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/txt_menu"
+            android:layout_toRightOf="@+id/crd_pengaduanMasyarak"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_IuranBulanan"
+                    android:layout_width="208dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/catatan"
+                    app:shapeAppearanceOverlay="@style/Circular2" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/name_IuranBulanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/crd_pengaduanMasyarak"
+            android:layout_below="@+id/crd_pengaduanMasyarak"
+            android:layout_marginStart="15dp"
+            android:layout_marginRight="20dp"
+            android:text="Iuran Bulanan"
+            android:textColor="@color/white" />
+
+
+<!--        Kalender  -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crd_Kalender"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/txt_menu"
+            android:layout_toRightOf="@+id/crd_IuranBulanan"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_Kalender"
+                    android:layout_width="208dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/kalenderr"
+                    app:shapeAppearanceOverlay="@style/Circular2" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/name_Kalender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/name_IuranBulanan"
+            android:layout_below="@+id/crd_pengaduanMasyarak"
+            android:text="Kalender"
+            android:layout_marginLeft="40dp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/berita"
+            android:text="Berita"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/name_pengaduanMasyarakat"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBerita"
+            android:padding="6dp"
+            android:layout_below="@id/berita"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+</ScrollView>

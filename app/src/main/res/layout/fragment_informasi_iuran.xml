@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".InformasiIuranFragment">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_InformasiIuran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_back"
+            android:id="@+id/toolbar_back"/>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Informasi Iuran"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title_profile"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crd_InformasiIuran"
+        android:layout_below="@+id/toolbar_InformasiIuran"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="@color/Blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_IuranWarga"
+                android:text="Sigit"
+                android:layout_margin="20dp"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/txt_Nik"
+                android:text="011100022010"
+                android:layout_marginStart="20dp"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_below="@+id/txt_IuranWarga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/txt_totalTagihan"
+                android:text="Total Tagihan"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="35dp"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_below="@+id/txt_Nik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/txt_totalBayaran"
+                android:text="Total Bayaran"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_below="@+id/txt_totalTagihan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txt_tunggakanIuran"
+                android:text="Tunggakan"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_below="@+id/txt_totalBayaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txt_HargaTagianIuran"
+                android:text="100.000"
+                android:textSize="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="35dp"
+                android:layout_below="@+id/txt_Nik"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txt_jumlahBayaran"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:layout_below="@+id/txt_HargaTagianIuran"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:text="20.000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_below="@+id/txt_jumlahBayaran"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:text="60.000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_RincianIuran"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/crd_InformasiIuran"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="139dp"
+        android:backgroundTint="@color/Blue"
+        android:text="Rincian Iuran" />
+
+
+</RelativeLayout>

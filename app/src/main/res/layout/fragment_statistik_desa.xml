@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Blue"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".StatistikDesaFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_StatistikDesa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_back"
+                android:id="@+id/toolbar_back"/>
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Statistik Desa"
+                android:layout_gravity="center"
+                android:id="@+id/toolbar_title_profile"/>
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:text="Desa Podok Ranji "
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/toolbar_StatistikDesa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/img_ProfileDesa"
+            android:src="@drawable/monumen_nasional"
+            android:layout_width="350dp"
+            android:layout_height="250dp"
+            android:scaleType="fitXY"
+            android:layout_margin="30dp"
+            android:layout_below="@+id/toolbar_StatistikDesa"/>
+
+        <TextView
+            android:id="@+id/txt_kt_desa"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:text="Pondok Ranji adalah sebuah kelurahan di kecamatan Ciputat Timur, Tangerang Selatan, Banten, Indonesia. Di Jalan W.R Supratman terdapat Stasiun Pondok Ranji. Sebagian kecil wilayah Pondok Ranji masuk dalam wilayah Kota Bintaro Jaya"
+            android:layout_below="@+id/img_ProfileDesa"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txt_provinsi"
+            android:text="Provinsi : Banten"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_below="@+id/txt_kt_desa"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txt_Kecamatan"
+            android:text="Kecamatan : Ciputat Timur"
+            android:layout_below="@+id/txt_provinsi"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txt_kodePos"
+            android:text="Kode Pos : 15422"
+            android:layout_below="@+id/txt_Kecamatan"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txt_Kota"
+            android:text="Kota : Tangerang Selatan"
+            android:layout_below="@+id/txt_kodePos"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crd_statistik_Desa"
+            android:layout_below="@+id/txt_Kota"
+            app:cardBackgroundColor="#FF9EAA"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="15dp">
+
+            <TextView
+                android:text="Statistik Desa 2024"
+                android:textColor="@color/black"
+                android:layout_marginTop="3dp"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                android:layout_marginStart="150dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <com.db.williamchart.view.BarChartView
+                android:id="@+id/Statistik_Desaa"
+                android:layout_marginTop="25dp"
+                android:layout_width="393dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt_Kota" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txt_PotensiDesa"
+            android:text="Potensi Desa"
+            android:layout_below="@+id/crd_statistik_Desa"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="7dp"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+        <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/rvBungurr"
+            android:layout_below="@id/txt_PotensiDesa"
+            android:padding="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+</ScrollView>

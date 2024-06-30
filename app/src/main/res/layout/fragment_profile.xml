@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_back"
+            android:id="@+id/toolbar_back"/>
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title_profile"/>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgProfile"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"/>
+
+    <TextView
+        android:id="@+id/txt_profileAccount"
+        android:text="Sigit"
+        android:layout_below="@+id/imgProfile"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnBahasa"
+        android:text="Changge app language"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/boladunia"
+        android:layout_below="@+id/txt_profileAccount"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnAccountname"
+        android:text="Detail Account"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/profile"
+        android:layout_below="@+id/btnBahasa"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:backgroundTint="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:id="@+id/btnHelp"
+        android:text="Help"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/info"
+        android:layout_below="@+id/btnAccountname"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:backgroundTint="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="Logout"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/Blue"
+        android:layout_below="@+id/btnHelp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DetailPengaduanFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/crd_DetailPengaduan"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="10dp"
+            android:layout_width="400dp"
+            android:layout_height="470dp">
+
+            <ImageView
+                android:id="@+id/img_DetailPengaduan"
+                android:src="@drawable/monumen_nasional"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:layout_height="499dp"/>
+
+            <ImageView
+                android:id="@+id/btn_backDetailPengaduan"
+                android:src="@drawable/img_2"
+                android:layout_margin="5dp"
+                android:layout_width="50dp"
+                android:layout_height="70dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txt_monomentNasionalDetail"
+            android:text="Monument Nasional"
+            android:textSize="30dp"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/crd_DetailPengaduan"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/img_location"
+            android:layout_below="@+id/txt_monomentNasionalDetail"
+            android:src="@drawable/baseline_location_on_24"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/lokasiBerita"
+            android:text="Pondok Ranji"
+            android:layout_below="@+id/txt_monomentNasionalDetail"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/img_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txt_descripsiBerita"
+            android:layout_below="@id/img_location"
+            android:layout_margin="10dp"
+            android:text="Monumen Nasional atau yang disingkat dengan Monas atau Tugu Monas adalah monumen peringatan setinggi 132 meter yang terletak tepat di tengah Lapangan Medan Merdeka, Jakarta Pusat."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/img_starsDetail"
+            android:layout_below="@+id/txt_monomentNasionalDetail"
+            android:src="@drawable/baseline_star_border_24"
+            android:layout_width="50dp"
+            android:layout_toLeftOf="@id/txt_Reting"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/txt_Reting"
+            android:text="4.9"
+            android:textColor="@color/Kuning"
+            android:layout_below="@id/txt_monomentNasionalDetail"
+            android:layout_alignParentRight="true"
+            android:textSize="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
