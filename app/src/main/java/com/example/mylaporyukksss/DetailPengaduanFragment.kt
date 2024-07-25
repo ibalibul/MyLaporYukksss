@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.bumptech.glide.Glide
 import com.example.model.ResponseDataFilmItem
+import com.example.model.ResponseDataPengaduanItem
 import com.example.mylaporyukksss.databinding.FragmentDetailPengaduanBinding
 
 
@@ -28,11 +29,13 @@ class DetailPengaduanFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        var dataBerita = arguments?.getSerializable("dataBerita") as ResponseDataFilmItem
-        binding.txtMonomentNasionalDetail.text = dataBerita.name
-        binding.lokasiBerita.text = dataBerita.director
-        binding.txtDescripsiBerita.text = dataBerita.desription
-        Glide.with(this).load(dataBerita.images).into(binding.imgDetailPengaduan)
+        var dataBerita = arguments?.getSerializable("dataBerita") as ResponseDataPengaduanItem
+        binding.txtMonomentNasionalDetail.text = dataBerita.judul
+        binding.lokasiBerita.text = dataBerita.lokasi
+        binding.txtDescripsiBerita.text = dataBerita.deskripsi
+        binding.notlpnPengadu.text = dataBerita.notlp.toString()
+        binding.tanggalPengadu.text = dataBerita.tanggal
+        Glide.with(this).load(dataBerita.foto).into(binding.imgDetailPengaduan)
 
         binding.btnBackDetailPengaduan.setOnClickListener{
             Navigation.findNavController(view).navigate(R.id.action_detailPengaduanFragment_to_homeFragment)

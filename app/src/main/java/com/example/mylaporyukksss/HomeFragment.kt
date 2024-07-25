@@ -1,30 +1,21 @@
 package com.example.mylaporyukksss
 
 import android.app.DatePickerDialog
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.DatePicker
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.findViewTreeViewModelStoreOwner
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.adapter.BeritaAdapter
-import com.example.adapter.ListBerita
-import com.example.data.DataBerita
-import com.example.model.ResponseDataFilmItem
 import com.example.mylaporyukksss.databinding.FragmentHomeBinding
-import com.example.network.RetrofitClient
 import com.example.viewmodel.ViewModelBerita
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -34,10 +25,11 @@ class HomeFragment : Fragment() {
 
     lateinit var adapterBerita : BeritaAdapter
     lateinit var binding : FragmentHomeBinding
-    lateinit var viewModel : ViewModelBerita
+    lateinit var viewModelUser : ViewModelBerita
     lateinit var crdCalender : CardView
     lateinit var tvdate : TextView
     private  var calender = Calendar.getInstance()
+    lateinit var sp : SharedPreferences
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -53,6 +45,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+//        viewModelUser = ViewModelProvider(this).get(viewModelUser::class.java)
 
 
         binding.accout.setOnClickListener {
@@ -77,10 +70,15 @@ class HomeFragment : Fragment() {
             showPickerDialog()
         }
 
-
-
+//        sp = requireActivity().getSharedPreferences("userdata",Context.MODE_PRIVATE)
+//
+//        var getName = sp.getString("name", "")
+//        var getemail = sp.getString("email", "")
+//        var getpassword = sp.getString("password", "")
+//        binding.txtUser.setText(getName)
 
         showDataFilm()
+
 
 
 

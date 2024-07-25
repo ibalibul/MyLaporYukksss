@@ -119,7 +119,6 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/crd_statistik_Desa"
             android:layout_below="@+id/txt_Kota"
-            app:cardBackgroundColor="#FF9EAA"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:layout_marginTop="10dp"
@@ -131,7 +130,7 @@
                 android:text="Statistik Desa 2024"
                 android:textColor="@color/black"
                 android:layout_marginTop="3dp"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="italic"
                 android:layout_marginStart="150dp"
                 android:layout_width="wrap_content"
@@ -140,7 +139,8 @@
             <com.db.williamchart.view.BarChartView
                 android:id="@+id/Statistik_Desaa"
                 android:layout_marginTop="25dp"
-                android:layout_width="393dp"
+                android:layout_width="390dp"
+                android:scrollbarSize="10dp"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/txt_Kota" />
         </androidx.cardview.widget.CardView>

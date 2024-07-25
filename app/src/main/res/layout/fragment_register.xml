@@ -17,68 +17,85 @@
         android:layout_height="wrap_content"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edFullName"
+        android:id="@+id/layout_name"
+        android:inputType="text"
+        android:hint="nama"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textSignUp"
-        android:padding="10dp"
-        app:boxBackgroundColor="@color/white"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="FullName">
+        android:layout_below="@id/textSignUp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/FullName"
+            android:id="@+id/editNama"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"/>
+            android:layout_height="match_parent"/>
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edEmailSignUp"
+        android:id="@+id/layout_email"
+        android:inputType="text"
+        android:hint="email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edFullName"
-        android:padding="10dp"
-        app:boxBackgroundColor="@color/white"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Email">
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/layout_name">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/EmailSignUp"
+            android:id="@+id/editemail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"/>
+            android:layout_height="match_parent"/>
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edPasswordSignUp"
+        android:id="@+id/layout_password"
+        android:inputType="textPassword"
+        android:hint="password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edEmailSignUp"
-        android:padding="10dp"
-        app:boxBackgroundColor="@color/white"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:endIconMode="password_toggle">
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/layout_email">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/adminPasswordSignUp"
+            android:id="@+id/editpassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword"/>
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_notlpn"
+        android:inputType="textPassword"
+        android:hint="No Telphone"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/layout_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editnotpln"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
         android:id="@+id/Checkboxlogin"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:text="I Agree to the Terms &amp; Conditions \n and Privacy Policy "
-        android:layout_below="@+id/edPasswordSignUp"
+        android:layout_below="@+id/layout_notlpn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/btnlogin"
+        android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Checkboxlogin"
@@ -99,12 +116,12 @@
         android:text="Or"
         android:textSize="12sp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/btnlogin"/>
+        android:layout_below="@id/btnRegister"/>
 
     <View
         android:layout_width="155dp"
         android:layout_height="3dp"
-        android:layout_below="@id/btnlogin"
+        android:layout_below="@id/btnRegister"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="19dp"
@@ -114,7 +131,7 @@
     <View
         android:layout_width="155dp"
         android:layout_height="3dp"
-        android:layout_below="@id/btnlogin"
+        android:layout_below="@id/btnRegister"
         android:layout_alignParentRight="true"
         android:layout_marginStart="19dp"
         android:layout_marginTop="20dp"

@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.example.model.DataFilm
 import com.example.model.PostResponseFilm
 import com.example.model.ResponseDataFilmItem
+import com.example.model.ResponseDataPengaduanItem
 import com.example.network.RetrofitClient
 import retrofit2.Call
 import retrofit2.Callback
@@ -12,15 +13,15 @@ import retrofit2.Response
 
 class ViewModelBerita : ViewModel() {
 
-    private var liveDataBerita : MutableLiveData<List<ResponseDataFilmItem>?>
-//    lateinit var postBerita : MutableLiveData<PostResponseFilm?>
+    private var liveDataBerita : MutableLiveData<List<ResponseDataPengaduanItem>?>
+    lateinit var postBerita : MutableLiveData<PostResponseFilm?>
 
     init {
         liveDataBerita = MutableLiveData()
-//        postBerita = MutableLiveData()
+        postBerita = MutableLiveData()
     }
 
-    fun getLiveDataBerita() : MutableLiveData<List<ResponseDataFilmItem>?>{
+    fun getLiveDataBerita() : MutableLiveData<List<ResponseDataPengaduanItem>?>{
         return liveDataBerita
     }
 
@@ -29,20 +30,19 @@ class ViewModelBerita : ViewModel() {
 //    }
 
     fun callApiBerita(){
-        RetrofitClient.instance.getAllDataFilm()
-            .enqueue(object : Callback<List<ResponseDataFilmItem>>{
+        RetrofitClient.instance.getallPengaduan()
+            .enqueue(object : Callback<List<ResponseDataPengaduanItem>>{
                 override fun onResponse(
-                    call: Call<List<ResponseDataFilmItem>>,
-                    response: Response<List<ResponseDataFilmItem>>
+                    call: Call<List<ResponseDataPengaduanItem>>,
+                    response: Response<List<ResponseDataPengaduanItem>>
                 ) {
                     if (response.isSuccessful){
                         liveDataBerita.postValue(response.body())
-                    }else{
+                    }else
                         liveDataBerita.postValue(null)
-                    }
                 }
 
-                override fun onFailure(call: Call<List<ResponseDataFilmItem>>, t: Throwable) {
+                override fun onFailure(call: Call<List<ResponseDataPengaduanItem>>, t: Throwable) {
                     liveDataBerita.postValue(null)
                 }
 

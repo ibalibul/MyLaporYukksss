@@ -44,19 +44,19 @@ class PengaduanMasyarakatFragment : Fragment() {
         binding.imgPengaduanMasyarakat.setOnClickListener{
             cameraPengaduan()
         }
-
+//
 //
 //        binding.btnKirimPengaduan.setOnClickListener{
 //            var namePengaduan = binding.JudulPengaduan.text.toString()
 //            var directorPengaduan = binding.lokasiPengaduan.text.toString()
 //            var deskripsi = binding.DeskripsiPengaduan.text.toString()
-////            var imgaesPengaduan = binding.imgPengaduanMasyarakat.setImageResource()
-////            addBerita(namePengaduan,directorPengaduan,deskripsi)
+//            var imgaesPengaduan = binding.imgPengaduanMasyarakat.setImageResource()
+//            addBerita(namePengaduan,directorPengaduan.toInt(),deskripsi,imgaesPengaduan)
 //
 //        }
-//    }
+    }
 
-//    fun addBerita(name : String, imgaes : String, director : String,  desription : String) {
+//    fun addBerita(name : String, imgaes : Int, director : String,  desription : String) {
 //        var viewModel = ViewModelProvider(this).get(ViewModelBerita::class.java)
 //        viewModel.callPostApiBerita(name,imgaes,director,desription)
 //        viewModel.postLiveDataBerita().observe(viewLifecycleOwner, Observer {
@@ -64,8 +64,8 @@ class PengaduanMasyarakatFragment : Fragment() {
 //                 Toast.makeText(context,"add Data Success",Toast.LENGTH_SHORT).show()
 //        })
 //    }
-//
-    }
+
+
 
     //        Mengambil langsung dari kamera
     private fun cameraPengaduan(){

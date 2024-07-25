@@ -1,6 +1,7 @@
 package com.example.mylaporyukksss
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -55,6 +56,13 @@ class StatistikDesaFragment : Fragment() {
         }
 
         binding.apply {
+            StatistikDesaa.barsGradientColors = intArrayOf(
+                Color.parseColor("#F4CE14"),
+                Color.parseColor("#36BA98"),
+                Color.parseColor("#FFC7ED"),
+                Color.parseColor("#FFF8DB"),
+                Color.parseColor("#36BA98"),
+            )
             StatistikDesaa.animation.duration = animationDuration
             StatistikDesaa.animate(datSet)
         }
@@ -63,14 +71,14 @@ class StatistikDesaFragment : Fragment() {
 
     companion object {
         private val datSet = listOf(
-            "JAN" to 4F,
+            "Jan" to 4F,
             "FEB" to 7F,
             "MAR" to 8F,
             "APR" to 9F,
             "MEI" to 1F,
             "JUN" to 10F,
         )
-        private const val animationDuration = 1000L
+        private const val animationDuration = 1200L
     }
 
 

@@ -1,118 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".PengaduanMasyarakatFragment">
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_PengaduanMasyarakat"
+    
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-        <ImageView
-            android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_PengaduanMasyarakat"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/arrow_back"
-            android:id="@+id/toolbar_backPengaduanMasyarakat"/>
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_back"
+                android:id="@+id/toolbar_backPengaduanMasyarakat"/>
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="19sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pengaduan Masyarakat"
+                android:layout_gravity="center"
+                android:id="@+id/toolbar_title_profile"/>
+        </androidx.appcompat.widget.Toolbar>
+
         <TextView
+            android:id="@+id/txt_pengaduanMasyarakat"
+            android:layout_below="@+id/toolbar_PengaduanMasyarakat"
+            android:layout_marginTop="20dp"
             android:textColor="@color/black"
-            android:textSize="19sp"
+            android:layout_marginLeft="40dp"
+            android:text="Lengkapi From Pengaduan"
+            android:textSize="25dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pengaduan Masyarakat"
-            android:layout_gravity="center"
-            android:id="@+id/toolbar_title_profile"/>
-    </androidx.appcompat.widget.Toolbar>
+            android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/txt_pengaduanMasyarakat"
-        android:layout_below="@+id/toolbar_PengaduanMasyarakat"
-       android:layout_marginTop="20dp"
-        android:textColor="@color/black"
-        android:layout_marginLeft="40dp"
-        android:text="Lengkapi From Pengaduan"
-        android:textSize="25dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/img_PengaduanMasyarakat"
+            android:layout_below="@id/txt_pengaduanMasyarakat"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="100dp"
+            android:src="@drawable/baseline_add_photo_alternate_24"
+            android:layout_width="150dp"
+            android:layout_height="150dp"/>
 
-    <ImageView
-        android:id="@+id/img_PengaduanMasyarakat"
-        android:layout_below="@id/txt_pengaduanMasyarakat"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="100dp"
-        android:src="@drawable/baseline_add_photo_alternate_24"
-        android:layout_width="150dp"
-        android:layout_height="150dp"/>
-
-<!--    Edittext Judul Pengaduan -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edJudulPengaduan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/img_PengaduanMasyarakat"
-        android:padding="10dp"
-        app:boxBackgroundColor="@color/white"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Judul Pengaduan">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/JudulPengaduan"
+        <!--    Edittext Judul Pengaduan -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edJudulPengaduan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_below="@+id/img_PengaduanMasyarakat"
+            android:padding="10dp"
+            app:boxBackgroundColor="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Judul Pengaduan">
 
-<!--    Lokasi Pengaduan -->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/JudulPengaduan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edLokasiPengaduan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edJudulPengaduan"
-        android:padding="10dp"
-        app:boxBackgroundColor="@color/white"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Lokasi Pengaduan">
+        <!--    Lokasi Pengaduan -->
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/lokasiPengaduan"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edLokasiPengaduan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_below="@+id/edJudulPengaduan"
+            android:padding="10dp"
+            app:boxBackgroundColor="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Lokasi Pengaduan">
 
-<!--    Deskripsi Pengaduan -->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/lokasiPengaduan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edDeskripsiPengaduan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edLokasiPengaduan"
-        android:padding="10dp"
-        app:boxBackgroundColor="@color/white"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Deskripsi Pengaduan">
+        <!--    Deskripsi Pengaduan -->
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/DeskripsiPengaduan"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edDeskripsiPengaduan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_below="@+id/edLokasiPengaduan"
+            android:padding="10dp"
+            app:boxBackgroundColor="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Deskripsi Pengaduan">
 
-    <Button
-        android:id="@+id/btn_kirimPengaduan"
-        android:text="Kirim"
-        android:layout_below="@+id/edDeskripsiPengaduan"
-        android:backgroundTint="@color/Blue"
-        android:layout_marginLeft="140dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-</RelativeLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/DeskripsiPengaduan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--        No Telephone -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edNoTelephoneText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edDeskripsiPengaduan"
+            android:padding="10dp"
+            app:boxBackgroundColor="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="No Telephone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edNoTelphonee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--        Tanggal -->
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edTanggalText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edNoTelephoneText"
+            android:padding="10dp"
+            app:boxBackgroundColor="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Tanggal">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edNoTanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_kirimPengaduan"
+            android:text="Kirim"
+            android:layout_below="@+id/edTanggalText"
+            android:backgroundTint="@color/Blue"
+            android:layout_marginLeft="140dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
